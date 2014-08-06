@@ -18,3 +18,4 @@ PLATFORMS
 DEPENDENCIES
   foreman
   puma
+  rack
