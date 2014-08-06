@@ -15,13 +15,14 @@ run lambda {|env|
 <html lang="ja">
     <head>
         <meta charset="UTF-8" />
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico" />
         <title>プーマが動いています。</title>
     </head>
     <body>
         <h1><a href="//puma-heroku.herokuapp.com">ヘロク</a>で<a href="//puma.io/">プーマ</a>が動いています。</h1>
         <p>現在 <%= Time.new.to_s %></p>
         <ul>
-        <li><a href="/">/</a></li>
+        <li><a href="/">/ (root)</a></li>
         <li><a href="/plain">/plain</a></li>
         <li><a href="/try404">/try404</a></li>
         </ul>
