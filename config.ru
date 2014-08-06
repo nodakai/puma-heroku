@@ -25,7 +25,7 @@ run lambda {|env|
         <li><a href="/plain">/plain</a></li>
         <li><a href="/try404">/try404</a></li>
         </ul>
-    <body/>
+    </body>
 </html>
         EOS
 
