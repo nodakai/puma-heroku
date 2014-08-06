@@ -18,7 +18,7 @@ run lambda {|env|
         <title>プーマが動いています。</title>
     </head>
     <body>
-        <h1>プーマが動いています。</h1>
+        <h1><a href="//puma-heroku.herokuapp.com">ヘロク</a>で<a href="//puma.io/">プーマ</a>が動いています。</h1>
         <p>現在 <%= Time.new.to_s %></p>
         <ul>
         <li><a href="/">/</a></li>
@@ -33,6 +33,9 @@ run lambda {|env|
     when '/plain'
         body = 'こんにちは、ヘロクとプーマ。'
         [200, {'Content-Type' => 'text/plain', 'Content-Length' => body.bytesize.to_s }, [body]]
+    when '/favicon.ico'
+        dat = File.binread('favicon.ico')
+        [200, {'Content-Type' => 'image/x-icon', 'Content-Length' => dat.bytesize.to_s }, [dat]]
     else
         Rack::Response.new('見つかりません', 404, 'Content-Type' => 'text/plain; charset=UTF-8')
     end
